@@ -260,18 +260,7 @@ img { max-width: 100%; height: auto; display: block; }
     position: relative;
 }
 
-/* Clean vertical line decor instead of blobs */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent 0%, var(--gray-200) 20%, var(--gray-200) 80%, transparent 100%);
-    z-index: 0;
-}
+/* Vertical line removed */
 
 .hero-container {
     max-width: var(--container-width);
@@ -300,13 +289,7 @@ img { max-width: 100%; height: auto; display: block; }
     gap: 12px;
 }
 
-.hero-tagline::before {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: var(--brand-blue);
-}
+/* Tagline line removed */
 
 .hero-title {
     font-family: var(--font-heading);
@@ -616,19 +599,6 @@ img { max-width: 100%; height: auto; display: block; }
 .facet-card h4 { font-size: 1.1rem; margin-bottom: 12px; }
 .facet-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; margin: 0; }
 
-.facet-card--wide {
-    grid-column: span 3;
-    display: flex;
-    gap: 32px;
-    align-items: center;
-    background: var(--gray-900); /* Dark card for emphasis */
-    color: var(--gray-300);
-}
-
-.facet-card--wide h4 { color: var(--white); }
-.facet-card--wide .facet-icon { color: var(--white); background: rgba(255,255,255,0.08); }
-.facet-card--wide:hover .facet-icon { color: var(--brand-orange); background: rgba(255,255,255,0.12); }
-.facet-card--wide p { color: var(--gray-400); }
 
 
 .about-conclusion {
