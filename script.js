@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- Language Switcher --------------------------------
     const langButtons = document.querySelectorAll('.lang-btn');
-    let currentLang = 'fr';
+    let currentLang = 'de';
 
     function switchLanguage(lang) {
         currentLang = lang;
@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (text !== null) {
                 el.innerHTML = text;
             }
+        });
+
+        // Update placeholders
+        document.querySelectorAll('[data-placeholder-fr]').forEach(el => {
+            const ph = el.getAttribute(`data-placeholder-${lang}`);
+            if (ph !== null) el.setAttribute('placeholder', ph);
         });
 
         // Update select options
@@ -69,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             switchLanguage(btn.dataset.lang);
         });
     });
+
+    // Load German by default
+    switchLanguage('de');
 
     // ---- Navbar scroll effect ----------------------------
     const navbar = document.getElementById('navbar');
